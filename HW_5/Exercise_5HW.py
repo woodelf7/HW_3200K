@@ -11,5 +11,5 @@ arcpy.CreateFileGDB_management("U:/Shared/GIS/StuData/sescot3127/Python/Python E
 for fc in fclist:
     shape =  arcpy.Describe(fc)
     if shape.shapeType == u'Polygon':
-        arcpy.CopyFeatures_management(fc, "U:/Shared/GIS/StuData/sescot3127/Python/Python Exercises/Data/Exercise06/Results/NM.gbd/" + shape.basename)
+        arcpy.CopyFeatures_management(shape, "U:/Shared/GIS/StuData/sescot3127/Python/Python Exercises/Data/Exercise06/Results/NM.gbd/" + shape.basename)
         
